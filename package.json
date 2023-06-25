@@ -1,0 +1,24 @@
+{
+  "name": "backend-lzw",
+  "version": "1.0.0",
+  "description": "Backend for lzw compression algorithm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KenEzekiel/backend-lzw.git"
+  },
+  "keywords": [
+    "Backend",
+    "LZW",
+    "Compression"
+  ],
+  "author": "Kenneth Ezekiel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KenEzekiel/backend-lzw/issues"
+  },
+  "homepage": "https://github.com/KenEzekiel/backend-lzw#readme"
+}
