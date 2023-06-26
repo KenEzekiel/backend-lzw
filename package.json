@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Backend for lzw compression algorithm",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/KenEzekiel/backend-lzw/issues"
   },
-  "homepage": "https://github.com/KenEzekiel/backend-lzw#readme"
+  "homepage": "https://github.com/KenEzekiel/backend-lzw#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.3.1"
+  }
 }

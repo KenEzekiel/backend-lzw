@@ -1,0 +1,11 @@
+{
+    "data": [  
+        {
+            "text": "abcd",
+            "compressed": 1020
+        }, {
+            "text": "efgh",
+            "compressed": 1010
+        }
+    ]
+}
