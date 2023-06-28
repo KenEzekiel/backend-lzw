@@ -149,7 +149,7 @@ export default class CompressController {
     }
   }
 
-  static async compressRLE(req, res, next) {
+  static async compressRLECtrl(req, res, next) {
     try {
       const text = req.params.textComp;
       let dic = new storeDict();
@@ -171,7 +171,7 @@ export default class CompressController {
     }
   }
 
-  static async decompressRLE(req, res, next) {
+  static async decompressRLECtrl(req, res, next) {
     try {
       var doubleCompressed = req.params.compressedDoc;
       var compressed = decompressRLE(doubleCompressed);
