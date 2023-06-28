@@ -67,6 +67,7 @@ export function decompressNoDict(data) {
   var c = "";
   c += s[0];
   output += s;
+  console.log("temp ", output);
   var count = 256;
 
   // console.log(dictionary);
