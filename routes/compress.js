@@ -1,7 +1,6 @@
 import express from "express";
 import CompressController from "../controllers/compress.js";
 const router = express.Router();
-// const CompressController = require("../controllers/compress.js");
 
 router.get("/", (req, res) => {
   res.send("hello world");

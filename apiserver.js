@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import compressRoute from "./routes/compress.js";
-// import next from "next"
 
 const app = express();
 
