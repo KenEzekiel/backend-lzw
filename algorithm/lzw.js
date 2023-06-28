@@ -87,6 +87,8 @@ export function decompressNoDict(data) {
       // console.log(s);
     }
     output += s;
+    console.log("temp ", output);
+
     c = "";
     c += s[0];
     // console.log("c", c);
@@ -96,6 +98,8 @@ export function decompressNoDict(data) {
     old = code;
   }
   // console.log(dictionary);
+  console.log("final ", output);
+
   return output;
 }
 
