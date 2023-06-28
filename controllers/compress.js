@@ -5,6 +5,7 @@ import {
   decompressLZW,
   decompressNoDict,
 } from "../algorithm/lzw.js";
+import { compressRLE, decompressRLE } from "../algorithm/rle.js";
 
 export default class CompressController {
   static async createCompress(req, res, next) {
@@ -138,6 +139,42 @@ export default class CompressController {
       var compressed = req.params.compressedDoc;
       //   compressed = compressed.split("-");
       //   compressed = compressed.join(" ");
+      console.log(compressed);
+      var text = decompressNoDict(compressed);
+      res.json(text);
+    } catch (e) {
+      res.status(500).json({
+        error: e.message,
+      });
+    }
+  }
+
+  static async compressRLE(req, res, next) {
+    try {
+      const text = req.params.textComp;
+      let dic = new storeDict();
+      const compressed = compressLZW(text, dic);
+
+      console.log(compressed);
+
+      const compressResponse = await compressDAO.addCompress(
+        text,
+        compressed,
+        dic
+      );
+      const doubleCompressed = compressRLE(compressed);
+      res.json(doubleCompressed);
+    } catch (e) {
+      res.status(500).json({
+        error: e.message,
+      });
+    }
+  }
+
+  static async decompressRLE(req, res, next) {
+    try {
+      var doubleCompressed = req.params.compressedDoc;
+      var compressed = decompressRLE(doubleCompressed);
       console.log(compressed);
       var text = decompressNoDict(compressed);
       res.json(text);

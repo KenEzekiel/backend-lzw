@@ -24,4 +24,7 @@ router
   .route("/decompdb/:compressedDoc")
   .get(CompressController.decompressWithDB);
 
+router("/compRLE/:textComp").get(CompressController.compressRLE);
+router("/decompRLE/:compressedDoc").get(CompressController.decompressRLE);
+
 export default router;
