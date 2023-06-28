@@ -54,6 +54,9 @@ export function decompressLZW(data, dictObj) {
 
 export function decompressNoDict(data) {
   data = data.split(" ");
+  if (data[data.length - 1] == "") {
+    let temp = data.pop();
+  }
   console.log("data length ", data.length);
   var dictionary = {};
   dictionary[0] = "NULL";
