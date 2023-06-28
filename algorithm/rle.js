@@ -51,5 +51,5 @@ export function decompressRLE(data) {
   return output;
 }
 
-// const compressed = compressRLE("65 66 256 258 258");
-// const decompressed = decompressRLE(compressed);
+const compressed = compressRLE("65 66 256 256");
+const decompressed = decompressRLE(compressed);

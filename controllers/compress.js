@@ -174,9 +174,11 @@ export default class CompressController {
   static async decompressRLECtrl(req, res, next) {
     try {
       var doubleCompressed = req.params.compressedDoc;
+      console.log("double Compressed ", doubleCompressed);
       var compressed = decompressRLE(doubleCompressed);
-      console.log(compressed);
+      console.log("Compressed ", compressed);
       var text = decompressNoDict(compressed);
+      console.log("Text ", text);
       res.json(text);
     } catch (e) {
       res.status(500).json({
